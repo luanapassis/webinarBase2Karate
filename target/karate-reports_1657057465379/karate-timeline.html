@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"features\/usuarios\/DeleteUsuario[1:8]","start":1657057102320,"end":1657057104151,"title":"features\/usuarios\/DeleteUsuario[1:8] 18:38:22.320-18:38:24.151 Deletar um usuario com sucesso"},{"id":2,"group":2,"content":"features\/usuarios\/PostUsuario[1:7]","start":1657057104174,"end":1657057104276,"title":"features\/usuarios\/PostUsuario[1:7] 18:38:24.174-18:38:24.276 Cadastrar usuario com sucesso com body no corpo do teste"},{"id":3,"group":3,"content":"features\/usuarios\/PostUsuario[2:27]","start":1657057104206,"end":1657057104316,"title":"features\/usuarios\/PostUsuario[2:27] 18:38:24.206-18:38:24.316 Cadastrar usuario com sucesso com body em arquivo"},{"id":4,"group":4,"content":"features\/usuarios\/PostUsuario[3:42]","start":1657057104217,"end":1657057104216,"title":"features\/usuarios\/PostUsuario[3:42] 18:38:24.217-18:38:24.216 Executando funcao ??? nao sei se vou falar"},{"id":5,"group":2,"content":"features\/usuarios\/GetUsuarios[1:8]","start":1657057102335,"end":1657057104073,"title":"features\/usuarios\/GetUsuarios[1:8] 18:38:22.335-18:38:24.073 Listar todos os usuarios cadastrados"},{"id":6,"group":3,"content":"features\/usuarios\/GetUsuarios[2:14]","start":1657057102320,"end":1657057104073,"title":"features\/usuarios\/GetUsuarios[2:14] 18:38:22.320-18:38:24.073 Listar usuario por nome"},{"id":7,"group":4,"content":"features\/usuarios\/GetUsuarios[3:20]","start":1657057102320,"end":1657057104073,"title":"features\/usuarios\/GetUsuarios[3:20] 18:38:22.320-18:38:24.073 Listar usuario por nome e email"},{"id":8,"group":5,"content":"features\/usuarios\/GetUsuarios[4:26]","start":1657057102320,"end":1657057104120,"title":"features\/usuarios\/GetUsuarios[4:26] 18:38:22.320-18:38:24.120 Listar usuario por nome e email e validar a quantidade de registro retornado","className":"failed"},{"id":9,"group":4,"content":"features\/usuarios\/GetUsuarios[5:33]","start":1657057104090,"end":1657057104136,"title":"features\/usuarios\/GetUsuarios[5:33] 18:38:24.090-18:38:24.136 Listar usuario por nome e email e validar o nome do usuario retornado","className":"failed"},{"id":10,"group":2,"content":"features\/usuarios\/GetUsuarios[6:41]","start":1657057104090,"end":1657057104120,"title":"features\/usuarios\/GetUsuarios[6:41] 18:38:24.090-18:38:24.120 Listar todos usuarios e verificar se algum e o usuario luana assis","className":"failed"},{"id":11,"group":3,"content":"features\/usuarios\/GetUsuarios[7:49]","start":1657057104090,"end":1657057104120,"title":"features\/usuarios\/GetUsuarios[7:49] 18:38:24.090-18:38:24.120 Listar todos usuarios e verificar se existe fulado e luana","className":"failed"},{"id":12,"group":3,"content":"features\/usuarios\/GetUsuarios[8:56]","start":1657057104137,"end":1657057104189,"title":"features\/usuarios\/GetUsuarios[8:56] 18:38:24.137-18:38:24.189 Listar todos usuarios e verificar se existe fulado e luana utilizando contains","className":"failed"},{"id":13,"group":5,"content":"features\/usuarios\/GetUsuarios[9:63]","start":1657057104137,"end":1657057104247,"title":"features\/usuarios\/GetUsuarios[9:63] 18:38:24.137-18:38:24.247 Verificar quantidade com o comando deep","className":"failed"},{"id":14,"group":2,"content":"features\/usuarios\/GetUsuarios[10:69]","start":1657057104137,"end":1657057104173,"title":"features\/usuarios\/GetUsuarios[10:69] 18:38:24.137-18:38:24.173 Verificar o email do usuario com o comando deep","className":"failed"},{"id":15,"group":4,"content":"features\/usuarios\/GetUsuarios[11:76]","start":1657057104137,"end":1657057104215,"title":"features\/usuarios\/GetUsuarios[11:76] 18:38:24.137-18:38:24.215 Validar algum retorno do header do response"},{"id":16,"group":1,"content":"features\/usuarios\/GetUsuarios[12:83]","start":1657057104169,"end":1657057104263,"title":"features\/usuarios\/GetUsuarios[12:83] 18:38:24.169-18:38:24.263 Verificar response completo","className":"failed"},{"id":17,"group":4,"content":"features\/usuarios\/PutUsuario[1:7]","start":1657057104233,"end":1657057104294,"title":"features\/usuarios\/PutUsuario[1:7] 18:38:24.233-18:38:24.294 Alterar um usuario com sucesso","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

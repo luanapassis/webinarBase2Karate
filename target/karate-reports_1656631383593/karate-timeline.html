@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"features\/usuarios\/GetUsuarios[1:8]","start":1656629619347,"end":1656629621150,"title":"features\/usuarios\/GetUsuarios[1:8] 19:53:39.347-19:53:41.150 Listar todos os usuarios cadastrados"},{"id":2,"group":2,"content":"features\/usuarios\/GetUsuarios[2:14]","start":1656629619347,"end":1656629621150,"title":"features\/usuarios\/GetUsuarios[2:14] 19:53:39.347-19:53:41.150 Listar usuario por nome"},{"id":3,"group":3,"content":"features\/usuarios\/GetUsuarios[3:20]","start":1656629619347,"end":1656629621151,"title":"features\/usuarios\/GetUsuarios[3:20] 19:53:39.347-19:53:41.151 Listar usuario por nome e email"},{"id":4,"group":4,"content":"features\/usuarios\/GetUsuarios[4:26]","start":1656629619347,"end":1656629621197,"title":"features\/usuarios\/GetUsuarios[4:26] 19:53:39.347-19:53:41.197 Listar usuario por nome e email e validar a quantidade de registro retornado","className":"failed"},{"id":5,"group":5,"content":"features\/usuarios\/GetUsuarios[5:33]","start":1656629619347,"end":1656629621206,"title":"features\/usuarios\/GetUsuarios[5:33] 19:53:39.347-19:53:41.206 Listar usuario por nome e email e validar o nome do usuario retornado","className":"failed"},{"id":6,"group":2,"content":"features\/usuarios\/GetUsuarios[6:41]","start":1656629621162,"end":1656629621224,"title":"features\/usuarios\/GetUsuarios[6:41] 19:53:41.162-19:53:41.224 Listar todos usuarios e verificar se algum e o usuario luana assis","className":"failed"},{"id":7,"group":1,"content":"features\/usuarios\/GetUsuarios[7:49]","start":1656629621162,"end":1656629621198,"title":"features\/usuarios\/GetUsuarios[7:49] 19:53:41.162-19:53:41.198 Listar todos usuarios e verificar se existe fulado e luana","className":"failed"},{"id":8,"group":3,"content":"features\/usuarios\/GetUsuarios[8:56]","start":1656629621194,"end":1656629621245,"title":"features\/usuarios\/GetUsuarios[8:56] 19:53:41.194-19:53:41.245 Listar todos usuarios e verificar se existe fulado e luana utilizando contains","className":"failed"},{"id":9,"group":4,"content":"features\/usuarios\/GetUsuarios[9:63]","start":1656629621205,"end":1656629621275,"title":"features\/usuarios\/GetUsuarios[9:63] 19:53:41.205-19:53:41.275 Verificar quantidade com o comando deep","className":"failed"},{"id":10,"group":1,"content":"features\/usuarios\/GetUsuarios[10:69]","start":1656629621211,"end":1656629621265,"title":"features\/usuarios\/GetUsuarios[10:69] 19:53:41.211-19:53:41.265 Verificar o email do usuario com o comando deep","className":"failed"},{"id":11,"group":5,"content":"features\/usuarios\/GetUsuarios[11:76]","start":1656629621215,"end":1656629621266,"title":"features\/usuarios\/GetUsuarios[11:76] 19:53:41.215-19:53:41.266 Validar algum retorno do header do response"},{"id":12,"group":2,"content":"features\/usuarios\/GetUsuarios[12:82]","start":1656629621233,"end":1656629621307,"title":"features\/usuarios\/GetUsuarios[12:82] 19:53:41.233-19:53:41.307 Verificar response completo","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

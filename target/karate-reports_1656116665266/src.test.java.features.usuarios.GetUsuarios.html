@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>src.test.java.features.usuarios.GetUsuarios</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-06-24 09:23:19 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[11:73]"><span>[11:73]</span> <span>Verificar response completo</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/features/usuarios/GetUsuarios.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Método get para listar usuarios cadastrados</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[11:73]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[11:73]</span>
+                <span class="scenario-name">Verificar response completo</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1170</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[11:73]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[11:73]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:3000&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">21:23:18.024 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/usuarios&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1128</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.75">21:23:19.079 request:
+1 &gt; GET http://localhost:3000/usuarios
+1 &gt; Host: localhost:3000
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:23:19.159 response time in milliseconds: 75
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; x-download-options: noopen
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-xss-protection: 1; mode=block
+1 &lt; x-moesif-transaction-id: 0c43033b-72dc-4390-a913-165d7ed7ee38
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 457
+1 &lt; Date: Sat, 25 Jun 2022 00:23:19 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{
+    &quot;quantidade&quot;: 2,
+    &quot;usuarios&quot;: [
+        {
+            &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+            &quot;email&quot;: &quot;fulano@qa.com&quot;,
+            &quot;password&quot;: &quot;teste&quot;,
+            &quot;administrador&quot;: &quot;true&quot;,
+            &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+        },
+        {
+            &quot;nome&quot;: &quot;luana assis&quot;,
+            &quot;email&quot;: &quot;luana@qa.com.br&quot;,
+            &quot;password&quot;: &quot;teste&quot;,
+            &quot;administrador&quot;: &quot;true&quot;,
+            &quot;_id&quot;: &quot;cZqQbDF6JrA9xCoW&quot;
+        }
+    ]
+}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref failed">77</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response contains</span>
+      </div>
+    </div>
+    <div class="time-cell failed">40</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.77">&quot;usuarios&quot;: [
+   {
+       &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+       &quot;email&quot;: &quot;fulano@qa.com&quot;,
+       &quot;password&quot;: &quot;teste&quot;,
+       &quot;administrador&quot;: &quot;true&quot;,
+       &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+   },
+   {
+       &quot;nome&quot;: &quot;luana assis&quot;,
+       &quot;email&quot;: &quot;luana@qa.com.br&quot;,
+       &quot;password&quot;: &quot;teste&quot;,
+       &quot;administrador&quot;: &quot;true&quot;,
+       &quot;_id&quot;: &quot;cZqQbDF6JrA9xCoW&quot;
+   }
+    ]</div>
+
+  
+
+  <div class="preformatted" data-parent="0.77">21:23:19.260 src/test/java/features/usuarios/GetUsuarios.feature:77
+And match response contains
+&quot;&quot;&quot;
+&quot;usuarios&quot;: [
+   {
+       &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+       &quot;email&quot;: &quot;fulano@qa.com&quot;,
+       &quot;password&quot;: &quot;teste&quot;,
+       &quot;administrador&quot;: &quot;true&quot;,
+       &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+   },
+   {
+       &quot;nome&quot;: &quot;luana assis&quot;,
+       &quot;email&quot;: &quot;luana@qa.com.br&quot;,
+       &quot;password&quot;: &quot;teste&quot;,
+       &quot;administrador&quot;: &quot;true&quot;,
+       &quot;_id&quot;: &quot;cZqQbDF6JrA9xCoW&quot;
+   }
+    ]
+&quot;&quot;&quot;
+js failed:
+&gt;&gt;&gt;&gt;
+01: &quot;usuarios&quot;: [
+02:    {
+03:        &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+04:        &quot;email&quot;: &quot;fulano@qa.com&quot;,
+05:        &quot;password&quot;: &quot;teste&quot;,
+06:        &quot;administrador&quot;: &quot;true&quot;,
+07:        &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+08:    },
+09:    {
+10:        &quot;nome&quot;: &quot;luana assis&quot;,
+11:        &quot;email&quot;: &quot;luana@qa.com.br&quot;,
+12:        &quot;password&quot;: &quot;teste&quot;,
+13:        &quot;administrador&quot;: &quot;true&quot;,
+14:        &quot;_id&quot;: &quot;cZqQbDF6JrA9xCoW&quot;
+15:    }
+16:     ]
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:10 Expected ; but found :
+&quot;usuarios&quot;: [
+          ^
+Unnamed:3:13 Expected ; but found :
+       &quot;nome&quot;: &quot;Fulano da Silva&quot;,
+             ^
+Unnamed:4:14 Expected ; but found :
+       &quot;email&quot;: &quot;fulano@qa.com&quot;,
+              ^
+Unnamed:5:17 Expected ; but found :
+       &quot;password&quot;: &quot;teste&quot;,
+                 ^
+Unnamed:6:22 Expected ; but found :
+       &quot;administrador&quot;: &quot;true&quot;,
+                      ^
+Unnamed:7:12 Expected ; but found :
+       &quot;_id&quot;: &quot;0uxuPY0cbmQhpEz1&quot;
+            ^
+Unnamed:8:3 Expected eof but found }
+   },
+   ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:401)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:141)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:137)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1252)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2205)
+- com.intuit.karate.core.ScenarioEngine.match(ScenarioEngine.java:1802)
+- com.intuit.karate.core.ScenarioEngine.matchResult(ScenarioEngine.java:178)
+
+src/test/java/features/usuarios/GetUsuarios.feature:77
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
